@@ -5,7 +5,7 @@ do
     sleep 0.1
 done
 
-if [[ ! -f /root/mysql-initialized ]]
+if test ! -f /root/mysql-initialized
 then
     echo "CREATE DATABASE db;" | mysql -u root --password=mysq1
     echo "UPDATE mysql.user SET Password=PASSWORD('$ROOT_PASSWORD') WHERE User='root'; FLUSH PRIVILEGES;" | mysql -u root --password=mysq1 mysql
