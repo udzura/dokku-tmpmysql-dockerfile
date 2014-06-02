@@ -6,6 +6,7 @@ do
 done
 
 if test -z "$ROOT_PASSWORD"
+then
     echo 'Warn: please set $ROOT_PASSWORD env like: -e ROOT_PASSWORD=foobar.' 1>&2
     exit 127
 fi
