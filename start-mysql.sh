@@ -1,5 +1,5 @@
 mysqld_safe &
-while ! ( echo ping | nc 127.0.0.1 3305 ) > /dev/null
+while ! ( echo ping | nc 127.0.0.1 3306 ) > /dev/null
 do
     echo -n .
     sleep 0.1
