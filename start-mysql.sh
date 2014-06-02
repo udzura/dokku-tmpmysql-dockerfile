@@ -5,6 +5,11 @@ do
     sleep 0.1
 done
 
+if test -z "$ROOT_PASSWORD"
+    echo 'Warn: please set $ROOT_PASSWORD env like: -e ROOT_PASSWORD=foobar.' 1>&2
+    exit 127
+fi
+
 if test ! -f /root/mysql-initialized
 then
     echo "CREATE DATABASE db;" | mysql -u root --password=mysq1
