@@ -3,6 +3,7 @@ MAINTAINER udzura "udzura@udzura.jp"
 
 RUN echo "#!/bin/sh\nexit 101" > /usr/sbin/policy-rc.d; chmod +x /usr/sbin/policy-rc.d
 RUN apt-get update
+RUN apt-get -y install lsof
 
 RUN echo mysql-server-5.5 mysql-server/root_password password 'mysq1' | debconf-set-selections
 RUN echo mysql-server-5.5 mysql-server/root_password_again password 'mysq1' | debconf-set-selections
