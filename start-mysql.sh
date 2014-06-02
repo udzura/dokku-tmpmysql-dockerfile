@@ -12,3 +12,5 @@ then
     echo "GRANT ALL ON *.* to root@'%' IDENTIFIED BY '$ROOT_PASSWORD'; FLUSH PRIVILEGES;" | mysql -u root --password="$ROOT_PASSWORD" mysql
     touch /root/mysql-initialized
 fi
+
+tailf /var/log/mysql.log
