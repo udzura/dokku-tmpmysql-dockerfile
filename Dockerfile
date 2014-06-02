@@ -17,7 +17,7 @@ RUN rm /usr/sbin/policy-rc.d
 RUN sed -i -e"s/^bind-address\s*=\s*127.0.0.1/bind-address = 0.0.0.0/" /etc/mysql/my.cnf
 
 # for debug
-VOLUME /var/log
+VOLUME /var/log/mysql
 
 EXPOSE 3306
 CMD "/usr/local/bin/start-mysql.sh"
