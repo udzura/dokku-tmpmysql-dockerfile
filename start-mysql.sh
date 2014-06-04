@@ -1,3 +1,4 @@
+#!/bin/bash
 mysqld_safe &
 while ! ( echo ping | nc 127.0.0.1 3306 ) > /dev/null
 do
